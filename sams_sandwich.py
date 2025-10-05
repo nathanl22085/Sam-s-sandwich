@@ -47,16 +47,16 @@ def salad_selection():
         print(count+1, "  ",salad_list[count])
         count+=1
     print("Press enter/return when you have finished chosing your salads ")
-    salad_added = " " #will hold a string of more than one item
+    salads_added = " " #will hold a string of more than one item
     selected_salad = " "#prompts the user to enter in a number to select a salad
 
     while selected_salad != " ": #if enter is not pressed it will keep prompting you to enter in a number
-        selected_salad = input(f"What number salad do you want?\nYou have selected: {salad_added}")
+        selected_salad = input(f"What number salad do you want?\nYou have selected: {salads_added}")
         if selected_salad != " ": #if you press enter this if statemnet will not run
             selected_salad = int(selected_salad)
             #this variable keeps adding on each selected item from salad list
-            salad_added = salad_added + "  " + salad_list[selected_salad]
-    return salad_added.strip() #removes empty space at start of the string
+            salads_added = salads_added + "  " + salad_list[selected_salad]
+    return salads_added.strip() #removes empty space at start of the string
 
 #main program
 print("Welcome to Sam's Sandwich Shop")
