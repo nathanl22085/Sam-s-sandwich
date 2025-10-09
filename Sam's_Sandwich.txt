@@ -152,3 +152,25 @@ Dressing choice: Balsamic vinaigrette
 Salad choice(s): Lettuce
 
 
+
+Date of booking:2025-10-10 09:21:21.669659
+Name: Asdfghjklasd
+Cellphone number: 12
+Bread choice: White
+Meat choice: Bacon
+Cheese choice: Chedder
+Dressing choice: Italian
+Salad choice(s): Tomato  Carrot  Cucumber  Onion
+
+
+
+Date of booking:2025-10-10 09:37:29.018848
+Name: Bob
+Cellphone number: 123456789
+Bread choice: White
+Meat choice: Pork
+Cheese choice: Feta
+Dressing choice: Honey mustard
+Salad choice(s): Onion  No salad
+
+
