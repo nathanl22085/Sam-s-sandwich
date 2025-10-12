@@ -74,19 +74,21 @@ def dressing_selection():
 
 #this function contains a list of salads and calls up the print_list function to display the options for the user to choose from
 def salad_selection():
-    salad_list=["Lettuce","Tomato","Carrot","Cucumber","Onion","No salad"]
-    print_list(salad_list,"salads")
-    print("Press enter/return when you have finished chosing your salads ")
-    salads_added = "" #will hold a string of more than one item
-    selected_salad = " "#prompts the user to enter in a number to select a salad
-
-    while selected_salad != "": #if enter is not pressed it will keep prompting you to enter in a number
-        selected_salad = input(f"What number salad do you want?\n You have selected: {salads_added}")
-        if selected_salad != "": #if you press enter this if statemnet will not run
-            selected_salad = int(selected_salad)
-            #this variable keeps adding on each selected item from salad list
-            salads_added = salads_added + "  " + salad_list[selected_salad-1]
-    return salads_added.strip() #removes empty space at start of the string
+    salad_list=["Lettuce","Tomato","Carrot","Cucumber","Onion","No salad",""]
+    count=0
+    print("We have the following salads, you can have as many as you want ")
+    while count <len(salad_list):
+         print(count+1,"  ", salad_list[count])
+         count+=1
+    print("Press enter/return when you have finished chosing your salads ")   
+    salad_choice=[]#empty list to hold the selected salads
+    while True:
+        salad_options=force_number("What number salad do you want? \n1  Lettuce\n2  Tomato\n3  Carrot\n4  Cucumber\n5  Onion\n6  No salad\n0  End selection\nWhich salad(s) did you want? Enter a number ",0,6) 
+        salad_choice.append(salad_list[salad_options-1])
+        print(f"Your selected salads are the following: {salad_choice}")
+        if salad_options==0:#exits the function
+            break
+    return ", ".join(salad_choice)#returns a string formating option
 
 def output_textfile(first_name,cellphone_number,sandwich_order):
     date_time=datetime.datetime.now()
